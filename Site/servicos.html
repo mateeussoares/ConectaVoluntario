@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Serviços</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="Imagens/logo_sem_fundo.png" alt="Logo_Do_Site" />
+      <h1 class="titulo-pagina">Conecta Voluntário</h1>
+    </header>
+     <nav>
+      <div class="nav-links">
+       <a href="index.html">Início</a>
+       <a href="sobre.html">Sobre</a>
+       <a href="servicos.html">Serviços</a>
+       <a href="contato.html">Contato</a>
+       <a href="entrar.html">Entrar</a>
+      </div>
+     </nav>
+    <main>
+      <h2 classe="o-que-oferecemos">O que oferecemos</h2>
+      <div class="caixa-galeria">
+        <div class="galeria-servicos">
+          <div class="imagem-com-legenda">
+            <p class="titulo-img-galeria">Feed de Atividades</p>
+            <img src="Imagens/img1_tela_inicio_app.png" alt="Tela_Inicial" />
+          </div>
+
+          <div class="imagem-com-legenda">
+            <p class="titulo-img-galeria">Encontrar ONGs</p>
+            <img src="Imagens/img2_tela_ongs_app.png" alt="Tela_ONGs" />
+          </div>
+
+          <div class="imagem-com-legenda">
+            <p class="titulo-img-galeria">Promover ou Participar</p>
+            <img src="Imagens/img3_tela_eventos_app.png" alt="Tela_Eventos" />
+          </div>
+
+          <div class="imagem-com-legenda">
+            <p class="titulo-img-galeria">Ranking de atividades</p>
+            <img src="Imagens/img4_tela_rank_app.png" alt="Tela_Rank" />
+          </div>
+          <div class="imagem-com-legenda">
+            <p class="titulo-img-galeria">Conexões</p>
+            <img src="Imagens/img5_tela_conexoes_app.png" alt="Tela_Conexoes" />
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <footer class="footer-separado">
+      <!-- Área Esquerda: Botões -->
+      <div class="baixe-nosso-app">
+        <p class="titulo-footer">Baixe nosso aplicativo</p>
+        <div class="botoes-footer">
+          <button class="app-link">APPLE STORE</button>
+          <button class="app-link">GOOGLE PLAY</button>
+        </div>
+      </div>
+
+      <!-- Área Centro: Logo + Texto -->
+      <div class="footer-centro">
+        <img src="Imagens/logo_sem_fundo.png" alt="Logo_Do_Site" />
+        <p>&copy; 2025 Conecta Voluntário</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname.split("/").pop();
+
+        links.forEach((link) => {
+          const linkHref = link.getAttribute("href");
+          if (linkHref === currentPage) {
+            link.classList.add("ativo");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

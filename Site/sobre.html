@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sobre</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="Imagens/logo_sem_fundo.png" alt="Logo_Do_Site" />
+      <h1 class="titulo-pagina">Conecta Voluntário</h1>
+    </header>
+    <nav>
+      <div class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="contato.html">Contato</a>
+        <a href="entrar.html">Entrar</a>
+      </div>
+    </nav>
+    <main>
+      <div class="caixa-texto-1">
+        <div class="o-que-e-conecta-voluntario">
+          <h2>O que é o Conecta Voluntário?</h2>
+          <p>
+            O <strong> Conecta Voluntário </strong> é um aplicativo intuitivo e
+            acessível que conecta pessoas dispostas a ajudar com instituições
+            que atendem comunidades em situação de vulnerabilidade social.
+            <br />
+            Através da plataforma, os usuários podem se cadastrar como
+            voluntários ou organizações, participar de eventos próximos à sua
+            localização, receber notificações personalizadas, formar equipes de
+            ação e até mesmo realizar doações com facilidade. <br />
+            Além de facilitar a conexão entre quem quer ajudar e quem precisa de
+            apoio, o <strong> Conecta Voluntário </strong> também incentiva a
+            participação de estudantes em ações voluntárias reconhecidas,
+            promovendo uma cultura de solidariedade organizada, com impacto
+            social real e duradouro. <br />
+            Se quiser saber mais sobre nossos serviços, clique
+            <a href="servicos.html">aqui</a>.
+            <br />
+          </p>
+        </div>
+        <div class="imagem-about">
+          <img src="Imagens/maos_dadas.jpg" alt="Mãos dadas" />
+        </div>
+      </div>
+
+      <div class="secao-history">
+        <div class="texto-nossa-historia">
+          <h2>Nossa história</h2>
+          <p>
+            Vindo de um projeto de <strong>Residência Tecnológica</strong>, o
+            <strong>Conecta Voluntário</strong> nasceu com o propósito de
+            aproximar quem quer ajudar de quem precisa de ajuda. Acreditamos que
+            pequenas ações podem transformar vidas — e nosso objetivo é tornar o
+            voluntariado mais acessível, simples e eficiente. <br />
+            O <strong>Conecta Voluntário</strong> nasceu com o propósito de
+            aproximar quem quer ajudar de quem precisa de ajuda. Acreditamos que
+            pequenas ações podem transformar vidas — e nosso objetivo é tornar o
+            voluntariado mais acessível, simples e eficiente. <br />
+            Nosso compromisso é com a empatia, a inclusão e o impacto social.
+            Queremos ser a ponte entre pessoas dispostas a fazer o bem e
+            organizações que lutam diariamente por um mundo melhor. <br />
+            Junte-se a nós nessa missão. Transforme. Inspire.
+            <strong> Conecte-se. </strong>
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer-separado">
+      <!-- Área Esquerda: Botões -->
+      <div class="baixe-nosso-app">
+        <p class="titulo-footer">Baixe nosso aplicativo</p>
+        <div class="botoes-footer">
+          <button class="app-link">APPLE STORE</button>
+          <button class="app-link">GOOGLE PLAY</button>
+        </div>
+      </div>
+
+      <!-- Área Centro: Logo + Texto -->
+      <div class="footer-centro">
+        <img src="Imagens/logo_sem_fundo.png" alt="Logo_Do_Site" />
+        <p>&copy; 2025 Conecta Voluntário</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname.split("/").pop();
+
+        links.forEach((link) => {
+          const linkHref = link.getAttribute("href");
+          if (linkHref === currentPage) {
+            link.classList.add("ativo");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

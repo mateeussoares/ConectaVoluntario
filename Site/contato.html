@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="Imagens/logo_sem_fundo.png" alt="Logo_Do_Site" />
+      <h1 class="titulo-pagina">Conecta Voluntário</h1>
+    </header>
+     <nav>
+      <div class="nav-links">
+       <a href="index.html">Início</a>
+       <a href="sobre.html">Sobre</a>
+       <a href="servicos.html">Serviços</a>
+       <a href="contato.html">Contato</a>
+       <a href="entrar.html">Entrar</a>
+      </div>
+     </nav>
+    <main>
+      <div class="form-wrapper">
+        <h2 class="entre-em-contato">
+          Entre em contato com o Conecta Voluntário
+        </h2>
+        <form>
+          <div class="form-group">
+            <label for="nome">Nome completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Seu nome"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Endereço de e-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="seu@email.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="number">Número de telefone para contato</label>
+            <input
+              type="number"
+              id="telefone"
+              name="telefone"
+              placeholder="(00) 00000-0000"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="cidade">Cidade de residência</label>
+            <select id="cidade" name="cidade" required>
+              <option value="" disabled selected>Selecione sua cidade</option>
+              <option value="Sao Paulo">São Paulo (SP)</option>
+              <option value="Rio de Janeiro">Rio de Janeiro (RJ)</option>
+              <option value="Brasilia">Brasília (DF)</option>
+              <option value="Salvador">Salvador (BA)</option>
+              <option value="Fortaleza">Fortaleza (CE)</option>
+              <option value="Belo Horizonte">Belo Horizonte (MG)</option>
+              <option value="Manaus">Manaus (AM)</option>
+              <option value="Curitiba">Curitiba (PR)</option>
+              <option value="Recife">Recife (PE)</option>
+              <option value="Goiania">Goiânia (GO)</option>
+              <option value="Belem">Belém (PA)</option>
+              <option value="Porto Alegre">Porto Alegre (RS)</option>
+              <option value="Guarulhos">Guarulhos (SP)</option>
+              <option value="Campinas">Campinas (SP)</option>
+              <option value="Sao Luis">São Luís (MA)</option>
+              <option value="Sao Goncalo">São Gonçalo (RJ)</option>
+              <option value="Maceio">Maceió (AL)</option>
+              <option value="Duque de Caxias">Duque de Caxias (RJ)</option>
+              <option value="Campo Grande">Campo Grande (MS)</option>
+              <option value="Natal">Natal (RN)</option>
+              <option value="outra">Outra cidade</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="motivo">Como você quer nos ajudar?</label>
+            <select id="motivo" name="motivo" required>
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="voluntario">Quero ser voluntário(a)</option>
+              <option value="doacoes">
+                Quero doar roupas, comida ou itens
+              </option>
+              <option value="empresa">Minha empresa quer ser parceira</option>
+              <option value="info">
+                Quero mais informações sobre o projeto
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Dúvidas ou sugestões</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              placeholder="Digite sua dúvida ou sugestão..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="botao">Enviar</button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer-separado">
+      <!-- Área Esquerda: Botões -->
+      <div class="baixe-nosso-app">
+        <p class="titulo-footer">Baixe nosso aplicativo</p>
+        <div class="botoes-footer">
+          <button class="app-link">APPLE STORE</button>
+          <button class="app-link">GOOGLE PLAY</button>
+        </div>
+      </div>
+
+      <!-- Área Centro: Logo + Texto -->
+      <div class="footer-centro">
+        <img src="Imagens/logo_sem_fundo.png" alt="Logo_Do_Site" />
+        <p>&copy; 2025 Conecta Voluntário</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname.split("/").pop();
+
+        links.forEach((link) => {
+          const linkHref = link.getAttribute("href");
+          if (linkHref === currentPage) {
+            link.classList.add("ativo");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
