@@ -10,15 +10,26 @@
       <img src="Imagens/logo_sem_fundo.png" alt="Logo_Do_Site" />
       <h1 class="titulo-pagina">Conecta Voluntário</h1>
     </header>
-     <nav>
-      <div class="nav-links">
-       <a href="index.html">Início</a>
-       <a href="sobre.html">Sobre</a>
-       <a href="servicos.html">Serviços</a>
-       <a href="contato.html">Contato</a>
-       <a href="entrar.html">Entrar</a>
+
+    <!-- Botão flutuante "Entrar" -->
+    <div class="botao-flutuante-usuario">
+      <img src="Imagens/iconeperfil.png" alt="Ícone usuário" />
+      <div class="texto-entrar">
+        <a href="entrar.html" class="link-duplo">Entre</a>
+        <span> ou </span>
+        <a href="cadastro.html" class="link-duplo">Cadastre-se</a>
       </div>
-     </nav>
+    </div>
+
+    <nav>
+      <div class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </nav>
+
     <main>
       <div class="form-wrapper">
         <h2 class="entre-em-contato">
@@ -114,17 +125,26 @@
         </form>
       </div>
     </main>
-    <footer class="footer-separado">
-      <!-- Área Esquerda: Botões -->
+
+    <footer>
       <div class="baixe-nosso-app">
         <p class="titulo-footer">Baixe nosso aplicativo</p>
         <div class="botoes-footer">
-          <button class="app-link">APPLE STORE</button>
-          <button class="app-link">GOOGLE PLAY</button>
+          <button class="app-link">
+            <img src="Imagens/logo_apple.png" alt="Apple" class="icon-app" />
+            APPLE STORE
+          </button>
+          <button class="app-link">
+            <img
+              src="Imagens/googleplay.png"
+              alt="Google Play"
+              class="icon-app"
+            />
+            GOOGLE PLAY
+          </button>
         </div>
       </div>
 
-      <!-- Área Centro: Logo + Texto -->
       <div class="footer-centro">
         <img src="Imagens/logo_sem_fundo.png" alt="Logo_Do_Site" />
         <p>&copy; 2025 Conecta Voluntário</p>

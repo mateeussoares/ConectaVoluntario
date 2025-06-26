@@ -5,7 +5,6 @@
     <title>Entrar</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      /* ESTILO EXTRA APENAS PARA O FORMULÁRIO */
       .form-login {
         width: 100%;
         max-width: 400px;
@@ -45,7 +44,6 @@
         <a href="sobre.html">Sobre</a>
         <a href="servicos.html">Serviços</a>
         <a href="contato.html">Contato</a>
-        <a href="entrar.html">Entrar</a>
       </div>
     </nav>
 
@@ -91,7 +89,46 @@
                 />
               </div>
 
-              <button type="submit">Entrar</button>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <button type="submit" style="padding: 10px 20px">Entrar</button>
+
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <span>Ou</span>
+                  <a
+                    href="#"
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                      text-decoration: none;
+                      background-color: #fff;
+                      border: 1px solid #ccc;
+                      padding: 8px 12px;
+                      border-radius: 6px;
+                    "
+                  >
+                    <img
+                      src="Imagens/logogoogle.png.png"
+                      alt="Google login"
+                      width="20"
+                      height="20"
+                    />
+                    <span
+                      style="color: #333; cursor: pointer"
+                      onclick="window.location.href='index.html'"
+                    >
+                      Entrar com Google
+                    </span>
+                  </a>
+                </div>
+              </div>
             </form>
 
             <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
@@ -100,17 +137,25 @@
       </section>
     </main>
 
-    <footer class="footer-separado">
-      <!-- Área Esquerda: Botões -->
+    <footer>
       <div class="baixe-nosso-app">
         <p class="titulo-footer">Baixe nosso aplicativo</p>
         <div class="botoes-footer">
-          <button class="app-link">APPLE STORE</button>
-          <button class="app-link">GOOGLE PLAY</button>
+          <button class="app-link">
+            <img src="Imagens/logo_apple.png" alt="Apple" class="icon-app" />
+            APPLE STORE
+          </button>
+          <button class="app-link">
+            <img
+              src="Imagens/googleplay.png"
+              alt="Google Play"
+              class="icon-app"
+            />
+            GOOGLE PLAY
+          </button>
         </div>
       </div>
 
-      <!-- Área Centro: Logo + Texto -->
       <div class="footer-centro">
         <img src="Imagens/logo_sem_fundo.png" alt="Logo_Do_Site" />
         <p>&copy; 2025 Conecta Voluntário</p>

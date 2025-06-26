@@ -1,54 +1,85 @@
 <!DOCTYPE html>
-<!-- Declaração do tipo de documento HTML -->
 <html lang="pt-br">
-  <!-- Início do HTML com linguagem português-brasileiro -->
   <head>
     <meta charset="UTF-8" />
-    <!-- Define a codificação de caracteres como UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Responsividade para dispositivos móveis -->
     <title>Cadastro</title>
-    <!-- Título da aba do navegador -->
     <link rel="stylesheet" href="style.css" />
-    <!-- Importa o arquivo CSS -->
+    <style>
+      .botao-google {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+        color: #333;
+        justify-content: center;
+      }
+
+      .botao-google img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .botoes-cadastro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .ou-label {
+        font-weight: bold;
+      }
+
+      .linha-ou-google {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    </style>
   </head>
   <body>
     <header>
       <img src="Imagens/logo_sem_fundo.png" alt="Logo_Do_Site" />
       <h1 class="titulo-pagina">Conecta Voluntário</h1>
     </header>
+
+    <!-- Botão flutuante "Entrar" -->
+    <a href="entrar.html" class="botao-flutuante"></a>
+
     <nav>
       <div class="nav-links">
         <a href="index.html">Início</a>
         <a href="sobre.html">Sobre</a>
         <a href="servicos.html">Serviços</a>
         <a href="contato.html">Contato</a>
-        <a href="entrar.html">Entrar</a>
       </div>
     </nav>
+
     <main>
       <h2 class="trabalhos-recentes">Entre com sua conta ou Cadastre-se</h2>
-      <!-- Seção principal de login -->
+
       <section class="login" id="login">
         <div class="container">
-          <!-- Container que divide a tela em dois lados -->
-
-          <!-- Lado esquerdo - Área para futura imagem -->
           <div class="img-entrar-cadastro">
             <img src="Imagens/logo_sem_fundo.png" />
           </div>
 
-          <!-- Lado direito - Formulário de cadastro -->
           <div class="lado-direito">
             <h1>CADASTRO DE USUÁRIO</h1>
-            <!-- Título -->
             <p class="texto-subtitulo">
               Preencha os dados para criar sua conta
             </p>
-            <!-- Subtítulo -->
 
             <form action="#" method="post" class="form-cadastro">
-              <!-- Formulário -->
               <label for="nome">Nome:</label>
               <input
                 type="text"
@@ -76,15 +107,66 @@
                 required
               /><br /><br />
 
-              <button type="submit">Cadastrar</button>
-              <!-- Botão de envio -->
+              <div class="botoes-cadastro">
+                <button type="submit">Cadastrar</button>
+
+                <div class="linha-ou-google">
+                  <span class="ou-label">Ou</span>
+                  <a href="#" class="botao-google">
+                    <img src="Imagens/logogoogle.png.png" alt="Google login" />
+                    <span
+                      style="color: #333; cursor: pointer"
+                      onclick="window.location.href='index.html'"
+                    >
+                      Entrar com Google
+                    </span>
+                  </a>
+                </div>
+              </div>
             </form>
 
             <p>Já tem uma conta? <a href="entrar.html">Faça login</a></p>
-            <!-- Link para a página de login -->
           </div>
         </div>
       </section>
     </main>
+    <footer>
+      <div class="baixe-nosso-app">
+        <p class="titulo-footer">Baixe nosso aplicativo</p>
+        <div class="botoes-footer">
+          <button class="app-link">
+            <img src="Imagens/logo_apple.png" alt="Apple" class="icon-app" />
+            APPLE STORE
+          </button>
+          <button class="app-link">
+            <img
+              src="Imagens/googleplay.png"
+              alt="Google Play"
+              class="icon-app"
+            />
+            GOOGLE PLAY
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-centro">
+        <img src="Imagens/logo_sem_fundo.png" alt="Logo_Do_Site" />
+        <p>&copy; 2025 Conecta Voluntário</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname.split("/").pop();
+
+        links.forEach((link) => {
+          const linkHref = link.getAttribute("href");
+          if (linkHref === currentPage) {
+            link.classList.add("ativo");
+          }
+        });
+      });
+    </script>
   </body>
 </html>

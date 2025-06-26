@@ -47,13 +47,13 @@ header img {
 }
 
 /*................. Imagens de Todas as Páginas ................ "Aqui é definido como todas as imagens do site se comportarão ao passar o mouse, manter isso para todas as imagens????"*/
-img {
+/*img {
   transition: transform 0.3s ease;
 }
 
 img:hover {
   transform: scale(1.1);
-}
+}*/
 
 /*............................. Página (Início) ..............................*/
 
@@ -212,7 +212,7 @@ nav .ativo {
 
 /*................ Rodapé Páginas "Sobre,Serviços,Portifólio,Contato" ................*/
 
-.footer-separado {
+footer {
   display: block;
   justify-content: space-betweencen;
   align-items: center;
@@ -359,6 +359,11 @@ nav .ativo {
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3)); /*Sombra*/
 }
 
+.texto-caixa-galeria {
+  text-align: center;
+  font-style: italic;
+}
+
 .titulo-img-galeria {
   color: azure;
   font-size: 16px;
@@ -373,10 +378,45 @@ nav .ativo {
 .titulo-img-galeria a {
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3)); /*Sombra*/
 }
-/*....................... Página Portifólio .........................*/
 
-.trabalhos-recentes {
+.imagem-com-legenda {
+  position: relative;
+  display: inline-block;
+}
+
+.imagem-com-legenda img {
+  display: block;
+  width: 200px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.imagem-com-legenda:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.hover-texto {
+  position: absolute;
+  top: 50%;
+  left: 95%; /* posiciona fora da imagem */
+  transform: translateY(-50%);
+  background-color: azure;
+  color: black;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap; /* evita quebra de linha */
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-left: 10px; /* espaço entre imagem e texto */
+  z-index: 2;
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3)); /*Sombra*/
+}
+
+.imagem-com-legenda:hover .hover-texto {
+  opacity: 1;
 }
 
 /*....................... Página Contato .........................*/
@@ -472,7 +512,7 @@ nav .ativo {
   overflow: hidden; /* Esconde conteúdo que ultrapassar as bordas */
 }
 
-/* Lado esquerdo reservado para a imagem futura */
+/* Lado esquerdo reservado para a imagem */
 .img-entrar-cadastro {
   flex: 1; /* Ocupa metade do container */
   display: flex;
@@ -501,7 +541,7 @@ nav .ativo {
 
 /* Texto de subtítulo dos formulários */
 .texto-subtitulo {
-  color: gray; /* Cor cinza */
+  color: gray;
   font-size: 14px; /* Tamanho da fonte */
   margin-bottom: 20px; /* Espaçamento abaixo do texto */
 }
@@ -547,4 +587,75 @@ nav .ativo {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.botao-flutuante-usuario {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #005aa7;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.botao-flutuante-usuario:hover {
+  background-color: #004080;
+}
+
+.botao-flutuante-usuario img {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.texto-entrar {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.link-duplo {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link-duplo:hover {
+  text-decoration: underline;
+}
+
+.app-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #2c7be5;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.app-link:hover {
+  background-color: #1a5cc6;
+}
+
+.icon-app {
+  width: 20px;
+  height: 20px;
 }
